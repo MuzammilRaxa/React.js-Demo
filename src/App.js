@@ -1,18 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
 import Balance from './components/Balance';
 import IncomeExpenses from './components/IncomeExpenses';
+import { GlobalProvider } from './context/GlobalState';
+import TransactionList from './components/TransactionList';
+import AddTransaciton from './components/AddTransaciton';
 
 function App() {
   return (
-    <div>
+    <GlobalProvider>
       <Header />
-      <div>
+      <div className=''>
         <Balance />
         <IncomeExpenses />
+        <TransactionList />
+        <AddTransaciton />
       </div>
-    </div>
+    </GlobalProvider>
   );
 }
 
